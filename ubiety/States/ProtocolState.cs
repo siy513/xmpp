@@ -50,6 +50,8 @@ namespace Ubiety.States
             if (!Features.HasFlag(ProtocolFeatures.StreamManagement)) return;
             if (tagEventArgs.Tag is GenericTag || tagEventArgs.Tag is Iq)
             {
+                if (UnacknowlegedStanzas == null)
+                    UnacknowlegedStanzas = new Queue<Tag>();
                 UnacknowlegedStanzas.Enqueue(tagEventArgs.Tag);
             }
         }
