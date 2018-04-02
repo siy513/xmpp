@@ -60,6 +60,9 @@ namespace Ubiety.Core
     [XmppTag("presence", Namespaces.Client, typeof (GenericTag))]
     [XmppTag("proceed", Namespaces.StartTls, typeof (GenericTag))]
     [XmppTag("malformed-request", Namespaces.Sasl, typeof (GenericTag))]
+    
+    [XmppTag("message",Namespaces.Client,typeof(GenericTag))]
+    [XmppTag("body", Namespaces.Client, typeof(GenericTag))]
 
     [XmppTag("csi", Namespaces.ClientState, typeof(GenericTag))]
     public class GenericTag : Tag
